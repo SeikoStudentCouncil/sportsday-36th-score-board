@@ -1,14 +1,42 @@
+$main-background-color: #e3e3e3;
+$main-black-color: #393939;
+$topbar-height: 10vh;
+body {
+  margin: 0px;
+}
+
+div {
+  margin: 0px;
+  color: $main-black-color;
+}
+
 .most-parent {
   height: 100vh;
   width: 100vw;
   background-color: #e3e3e3;
 
   .topbar {
-    height: 80px;
+    height: $topbar-height;
     width: 100vw;
+    display: flex;
+    align-items: center;
+
+    .topbar-title {
+      display: inline-block;
+      height: calc(#{$topbar-height} * 0.7);
+      margin-left: 1vw;
+    }
+
+    .topbar-menu {
+      display: inline-block;
+      height: calc(#{$topbar-height} * 0.65);
+      margin-right: 2vw;
+      margin-left: auto;
+      cursor: pointer;
+    }
   }
 
   .content-body {
-    height: calc(100vh - 80px);
+    height: calc(100vh - #{$topbar-height});
   }
 }
