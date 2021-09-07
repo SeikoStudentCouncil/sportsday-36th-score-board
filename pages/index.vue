@@ -4,7 +4,14 @@
     <img src="image/title.svg" alt="" class="topbar-title">
     <img src="image/menu-icon.svg" alt="" class="topbar-menu" @click="onClickMenu" :data-menu-text="siteName">
   </div>
-  <div class="content-body"></div>
+  <div class="content-body">
+    <div class="site-upper">
+      <div class="site-title-container">
+        <div class="site-title">SCORE</div><br>
+        <div class="site-title-note">SEIKO GAKUIN SPORTSFES 2021<br>DISPLAY OF POINTS EARNED BY EACH TEAM<br>>>></div>
+      </div>
+    </div>
+  </div>
 </div>
 </template>
 

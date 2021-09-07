@@ -38,5 +38,24 @@ div {
 
   .content-body {
     height: calc(100vh - #{$topbar-height});
+
+    .site-title-container {
+      width: 30vw;
+      height: auto;
+      margin-left: 1vw;
+
+      .site-title {
+        height: auto;
+        width: 100%;
+        border-bottom: #393939 10px;
+        margin-top: 5vh;
+        font-family: "refrigerator-deluxe";
+        font-size: 5em;
+        font-weight: 900;
+        color: $main-background-color;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $main-black-color;
+      }
+    }
   }
 }
