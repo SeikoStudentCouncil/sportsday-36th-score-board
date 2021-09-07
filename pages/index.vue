@@ -1,5 +1,8 @@
 <template>
-  <Tutorial/>
+<div class="most-parent">
+  <div class="topbar"></div>
+  <div class="content-body"></div>
+</div>
 </template>
 
 <script lang="ts">
