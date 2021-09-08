@@ -54,9 +54,9 @@ div {
           width: 100%;
           border-bottom: solid $main-black-color 10px;
           margin-top: 5vh;
-          font-size: 6em;
+          font-size: 7em;
           font-weight: 900;
-          color: $main-background-color;
+          color: transparent;
           -webkit-text-stroke-width: 1px;
           -webkit-text-stroke-color: $main-black-color;
           line-height: 0.9em;
@@ -118,21 +118,32 @@ div {
           background: $main-black-color;
         }
 
-        .score-board-score {
-          display: inline-block;
-          font-size: 5em;
-          vertical-align: top;
-        }
+        .score-board-body {
+          display: flex;
+          align-items: center;
 
-        .score-board-rank {
-          display: inline-block;
-          line-height: 1.7em;
-          vertical-align: top;
-          float: right;
-          width: 30%;
-          text-align: center;
-          font-size: 3em;
-          border: solid 7px $main-black-color;
+          .score-board-score {
+            font-size: 5em;
+            vertical-align: top;
+            font-weight: 700;
+          }
+          
+
+          .score-board-rank {
+            line-height: 1.1em;
+            vertical-align: top;
+            float: right;
+            width: auto;
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+            text-align: center;
+            font-size: 2.5em;
+            border: solid 7px $main-black-color;
+            margin-left: auto;
+            font-family: futura-pt,sans-serif;
+            font-weight: 500;
+            font-style: normal;
+          }
         }
       }
     }
