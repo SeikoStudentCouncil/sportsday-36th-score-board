@@ -88,6 +88,9 @@ export default Vue.extend({
         }
       });
     },
+  },
+  mounted() {
+    // callAppsScript()
   }
 })
 </script>
