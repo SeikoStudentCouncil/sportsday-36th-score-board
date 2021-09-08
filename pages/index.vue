@@ -71,7 +71,23 @@ export default Vue.extend({
   methods: {
     onClickMenu() {
       this.isOpenMenu = (this.isOpenMenu)? false : true
-    }
+    },
+    callAppsScript(functionName: string, parameters: object, callbackFunc: (res: any) => void) {
+      var request = { 'function': functionName, 'parameters': parameters };
+      $.ajax({
+        type:"post",
+        url: "https://script.google.com/macros/s/AKfycbwkOqjPg3gLyode1FzXUN71DwC0Tkwl7s-g_mauUCBQ7fKgUWfXPIZye6NmgmK2dFEe1A/exec",
+        data: request,
+        dataType: "jsonp",
+        success: function(data: any) {
+          console.log(data)
+          callbackFunc(data);
+        },
+        error: function(data: any) {
+          console.log(data);
+        }
+      });
+    },
   }
 })
 </script>
