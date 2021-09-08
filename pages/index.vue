@@ -32,6 +32,11 @@
         <div class="score-board-score">632</div>
         <div class="score-board-rank">#2</div>
       </div>
+      <div class="score-board-block">
+        <div class="score-board-team-title">TEAM BLUE</div><br>
+        <div class="score-board-score">632</div>
+        <div class="score-board-rank">#2</div>
+      </div>
     </div>
   </div>
 </div>
