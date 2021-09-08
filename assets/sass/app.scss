@@ -8,6 +8,7 @@ body {
 div {
   margin: 0px;
   color: $main-black-color;
+  font-family: "refrigerator-deluxe";
 }
 
 .most-parent {
@@ -39,22 +40,66 @@ div {
   .content-body {
     height: calc(100vh - #{$topbar-height});
 
-    .site-title-container {
-      width: 30vw;
+    .site-upper {
+      width: 98vw;
       height: auto;
       margin-left: 1vw;
+      display: flex;
+      max-height: 30vh;
 
-      .site-title {
-        height: auto;
-        width: 100%;
-        border-bottom: #393939 10px;
-        margin-top: 5vh;
-        font-family: "refrigerator-deluxe";
-        font-size: 5em;
-        font-weight: 900;
-        color: $main-background-color;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: $main-black-color;
+      .site-title-container {
+        flex: 35;
+        .site-title {
+          height: auto;
+          width: 100%;
+          border-bottom: solid $main-black-color 10px;
+          margin-top: 5vh;
+          font-size: 6em;
+          font-weight: 900;
+          color: $main-background-color;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: $main-black-color;
+          line-height: 0.9em;
+        }
+        .site-title-note {
+          height: auto;
+          width: 100%;
+          font-size: 1em;
+          font-weight: 900;
+          margin-top: 10px;
+          text-align: right;
+          letter-spacing: 0.05em;
+        }
+      }
+
+      .menu-container {
+        margin-left: auto;
+        flex: 65;
+        .menu-site-title {
+          height: auto;
+          width: calc(#{$topbar-height} * 0.65);
+          float: right;
+          margin-right: 1vw;
+          writing-mode: vertical-rl;
+          font-size: 2em;
+          line-height: calc(#{$topbar-height} * 0.65);
+          font-weight: 900;
+          letter-spacing: 0.05em;
+          margin-top: 10px;
+          transition: all 0.2s;
+
+          @at-root {
+          }
+        }
+      }
+    }
+
+    .site-main {
+      .score-board-block {
+        display: inline-block;
+        width: calc((100vw - 50px * 4) / 3);
+        background: red;
+        margin-left: 50px;
       }
     }
   }

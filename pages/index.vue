@@ -7,8 +7,30 @@
   <div class="content-body">
     <div class="site-upper">
       <div class="site-title-container">
-        <div class="site-title">SCORE</div><br>
+        <div class="site-title">SCORE</div>
         <div class="site-title-note">SEIKO GAKUIN SPORTSFES 2021<br>DISPLAY OF POINTS EARNED BY EACH TEAM<br>>>></div>
+      </div>
+      <div class="menu-container">
+        <div class="menu-site-title">
+          SCORE
+        </div>
+      </div>
+    </div>
+    <div class="site-main">
+      <div class="score-board-block">
+        <div class="score-board-team-title">TEAM BLUE</div><br>
+        <div class="score-board-score">632</div>
+        <div class="score-board-rank">#2</div>
+      </div>
+      <div class="score-board-block">
+        <div class="score-board-team-title">TEAM BLUE</div><br>
+        <div class="score-board-score">632</div>
+        <div class="score-board-rank">#2</div>
+      </div>
+      <div class="score-board-block">
+        <div class="score-board-team-title">TEAM BLUE</div><br>
+        <div class="score-board-score">632</div>
+        <div class="score-board-rank">#2</div>
       </div>
     </div>
   </div>
