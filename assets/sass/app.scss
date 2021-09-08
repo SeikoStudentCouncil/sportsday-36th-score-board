@@ -95,11 +95,45 @@ div {
     }
 
     .site-main {
+      width: 100vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       .score-board-block {
         display: inline-block;
         width: calc((100vw - 50px * 4) / 3);
-        background: red;
         margin-left: 50px;
+        margin-top: 10vh;
+        border-bottom: solid 2px $main-black-color;
+
+        .score-board-team-title {
+          display: inline-block;
+          width: 35%;
+          font-weight: 700;
+          font-size: 1.8em;
+          line-height: 1.5em;
+          padding-left: 0.5em;
+          padding-right: 0.5em;
+          color: $main-background-color;
+          background: $main-black-color;
+        }
+
+        .score-board-score {
+          display: inline-block;
+          font-size: 5em;
+          vertical-align: top;
+        }
+
+        .score-board-rank {
+          display: inline-block;
+          line-height: 1.7em;
+          vertical-align: top;
+          float: right;
+          width: 30%;
+          text-align: center;
+          font-size: 3em;
+          border: solid 7px $main-black-color;
+        }
       }
     }
   }

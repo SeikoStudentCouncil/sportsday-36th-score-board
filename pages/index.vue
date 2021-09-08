@@ -19,23 +19,39 @@
     <div class="site-main">
       <div class="score-board-block">
         <div class="score-board-team-title">TEAM BLUE</div><br>
-        <div class="score-board-score">632</div>
-        <div class="score-board-rank">#2</div>
+         <div class="score-board-body">
+          <div class="score-board-score">632</div>
+          <div class="score-board-rank">#2</div>
+        </div>
       </div>
       <div class="score-board-block">
-        <div class="score-board-team-title">TEAM BLUE</div><br>
-        <div class="score-board-score">632</div>
-        <div class="score-board-rank">#2</div>
+        <div class="score-board-team-title">TEAM YELLOW</div><br>
+        <div class="score-board-body">
+          <div class="score-board-score">632</div>
+          <div class="score-board-rank">#2</div>
+        </div>
       </div>
       <div class="score-board-block">
-        <div class="score-board-team-title">TEAM BLUE</div><br>
-        <div class="score-board-score">632</div>
-        <div class="score-board-rank">#2</div>
+        <div class="score-board-team-title">TEAM GREEN</div><br>
+         <div class="score-board-body">
+          <div class="score-board-score">632</div>
+          <div class="score-board-rank">#2</div>
+        </div>
+      </div>
+      <br>
+      <div class="score-board-block">
+        <div class="score-board-team-title">TEAM WHITE</div><br>
+        <div class="score-board-body">
+          <div class="score-board-score">632</div>
+          <div class="score-board-rank">#2</div>
+        </div>
       </div>
       <div class="score-board-block">
-        <div class="score-board-team-title">TEAM BLUE</div><br>
-        <div class="score-board-score">632</div>
-        <div class="score-board-rank">#2</div>
+        <div class="score-board-team-title">TEAM RED</div><br>
+        <div class="score-board-body">
+          <div class="score-board-score">632</div>
+          <div class="score-board-rank">#2</div>
+        </div>
       </div>
     </div>
   </div>
