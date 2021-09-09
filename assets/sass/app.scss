@@ -106,6 +106,10 @@ div {
         margin-top: 10vh;
         border-bottom: solid 2px $main-black-color;
 
+        &:nth-child(1) {
+          margin-left: 0px;
+        }
+
         .score-board-team-title {
           display: inline-block;
           width: 35%;
@@ -142,6 +146,58 @@ div {
             font-family: futura-pt, sans-serif;
             font-weight: 400;
             font-style: normal;
+          }
+        }
+      }
+
+      .select-result-block {
+        display: inline-block;
+        width: calc((100vw - 100px * 3) / 2);
+        margin-left: 100px;
+        margin-top: 5vh;
+        border-bottom: solid 2px $main-black-color;
+        display: flex;
+
+        align-items: center;
+
+        &:nth-child(1) {
+          margin-left: 0px;
+        }
+
+        .score-board-team-title {
+          width: 35%;
+          font-weight: 700;
+          font-size: 1.8em;
+          line-height: 1.5em;
+          padding-left: 0.5em;
+          padding-right: 0.5em;
+          color: $main-background-color;
+          background: $main-black-color;
+          margin-bottom: 1vh;
+        }
+
+        .score-board-select {
+          vertical-align: top;
+          line-height: 1.3em;
+          float: right;
+          width: auto;
+          padding-left: 0.5em;
+          padding-right: 1.5em;
+          text-align: left;
+          font-size: 1.8em;
+          border: solid 4px $main-black-color;
+          margin-left: auto;
+          font-weight: 400;
+          font-style: normal;
+          background: $main-background-color;
+          margin-bottom: 1vh;
+
+          option {
+            font-size: 0.5em;
+            border: transparent;
+            background: $main-black-color;
+            color: $main-background-color;
+            margin: 0;
           }
         }
       }

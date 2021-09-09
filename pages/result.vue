@@ -8,7 +8,7 @@
     <div class="site-upper">
       <div class="site-title-container">
         <div class="site-title">RESULT</div>
-        <div class="site-title-note">SEIKO GAKUIN SPORTSFES 2021<br>DISPLAY OF POINTS EARNED BY EACH TEAM<br>>>></div>
+        <div class="site-title-note">SEIKO GAKUIN SPORTSFES 2021<br>DISPLAY RESULTS OF PREVIOUS GAMES<br>>>></div>
       </div>
       <div class="menu-container">
         <div class="menu-site-title">
@@ -17,6 +17,26 @@
       </div>
     </div>
     <div class="site-main">
+      <div class="select-result-block">
+        <div class="score-board-team-title">COMPETITION EVENT</div>
+        <select class="score-board-select">
+          <option value="">サッカー</option>
+          <option value="">タグラグビー</option>
+          <option value="">ドッジボール</option>
+          <option value="">バスケ</option>
+          <option value="">バレー</option>
+        </select>
+      </div>
+       <div class="select-result-block">
+        <div class="score-board-team-title">COMPETITION GRADE</div>
+        <select class="score-board-select">
+          <option value="">J1</option>
+          <option value="">J2</option>
+          <option value="">J3</option>
+          <option value="">S1</option>
+          <option value="">S2</option>
+        </select>
+      </div>
     </div>
   </div>
 </div>
