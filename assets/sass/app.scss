@@ -1,6 +1,17 @@
 $main-background-color: #e3e3e3;
 $main-black-color: #393939;
 $topbar-height: 10vh;
+$topbar-height-mobile: 7vh;
+
+$breakpoint: 767px;
+
+// mixinの定義
+@mixin mobile() {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
 body {
   margin: 0px;
 }
@@ -9,6 +20,7 @@ div {
   margin: 0px;
   color: $main-black-color;
   font-family: "refrigerator-deluxe";
+  background: $main-background-color;
 }
 
 .most-parent {
@@ -18,6 +30,9 @@ div {
 
   .topbar {
     height: $topbar-height;
+    @include mobile() {
+      height: $topbar-height-mobile;
+    }
     width: 100vw;
     display: flex;
     align-items: center;
@@ -25,12 +40,18 @@ div {
     .topbar-title {
       display: inline-block;
       height: calc(#{$topbar-height} * 0.7);
+      @include mobile() {
+        height: calc(#{$topbar-height-mobile} * 0.7);
+      }
       margin-left: 1vw;
     }
 
     .topbar-menu {
       display: inline-block;
       height: calc(#{$topbar-height} * 0.65);
+      @include mobile() {
+        height: calc(#{$topbar-height-mobile} * 0.65);
+      }
       margin-right: 2vw;
       margin-left: auto;
       cursor: pointer;
@@ -39,6 +60,9 @@ div {
 
   .content-body {
     height: calc(100vh - #{$topbar-height});
+    @include mobile() {
+      height: auto;
+    }
 
     .site-upper {
       width: 98vw;
@@ -88,7 +112,9 @@ div {
           margin-top: 10px;
           transition: all 0.2s;
 
-          @at-root {
+          @include mobile() {
+            width: calc(#{$topbar-height-mobile} * 0.65);
+            line-height: calc(#{$topbar-height-mobile} * 0.65);
           }
         }
       }
@@ -103,6 +129,10 @@ div {
         display: inline-block;
         width: calc((100vw - 50px * 4) / 3);
         margin-left: 50px;
+        @include mobile() {
+          width: 80vw;
+          margin-left: 0px;
+        }
         margin-top: 10vh;
         border-bottom: solid 2px $main-black-color;
 
@@ -120,6 +150,9 @@ div {
           padding-right: 0.5em;
           color: $main-background-color;
           background: $main-black-color;
+          @include mobile() {
+            width: 50%;
+          }
         }
 
         .score-board-body {
@@ -201,6 +234,21 @@ div {
           }
         }
       }
+
+      .display-result-block {
+        height: 50vh;
+        width: 100%;
+        display: flex;
+      }
+    }
+
+    .result-spreadsheet {
+      height: 50vh;
+      width: 80vw;
+      margin-left: 10vw;
+      margin-top: 5vh;
+      background: $main-background-color;
+      border: solid $main-black-color 4px;
     }
   }
 }

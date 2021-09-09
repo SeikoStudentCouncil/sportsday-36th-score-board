@@ -1,8 +1,8 @@
 <template>
 <div class="most-parent">
   <div class="topbar">
-    <img src="image/title.svg" alt="" class="topbar-title">
-    <img src="image/menu-icon.svg" alt="" class="topbar-menu" @click="onClickMenu">
+    <img src="@/assets/image/title.svg" alt="" class="topbar-title">
+    <img src="@/assets/image/menu-icon.svg" alt="" class="topbar-menu" @click="onClickMenu">
   </div>
   <div class="content-body">
     <div class="site-upper">
@@ -16,28 +16,7 @@
         </div>
       </div>
     </div>
-    <div class="site-main">
-      <div class="select-result-block">
-        <div class="score-board-team-title">COMPETITION EVENT</div>
-        <select class="score-board-select">
-          <option value="">サッカー</option>
-          <option value="">タグラグビー</option>
-          <option value="">ドッジボール</option>
-          <option value="">バスケ</option>
-          <option value="">バレー</option>
-        </select>
-      </div>
-       <div class="select-result-block">
-        <div class="score-board-team-title">COMPETITION GRADE</div>
-        <select class="score-board-select">
-          <option value="">J1</option>
-          <option value="">J2</option>
-          <option value="">J3</option>
-          <option value="">S1</option>
-          <option value="">S2</option>
-        </select>
-      </div>
-    </div>
+    <iframe class="result-spreadsheet" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGr-bGYWZHSVIyvuvYB6EJrmu9eAL3axwQdxScQJmtRS3qVGoTmIcB4G2hQ5stI-nd17ObBtSFgueT/pubhtml?gid=779353999&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
   </div>
 </div>
 </template>
@@ -53,13 +32,13 @@ export default Vue.extend({
   },
   methods: {
     onClickMenu() {
-      this.isOpenMenu = (this.isOpenMenu)? false : true
+      window.location.href = "/score"
     },
     callAppsScript(functionName: string, parameters: object, callbackFunc: (res: any) => void) {
       var request = { 'function': functionName, 'parameters': parameters };
       $.ajax({
         type:"post",
-        url: "https://script.google.com/macros/s/AKfycbwkOqjPg3gLyode1FzXUN71DwC0Tkwl7s-g_mauUCBQ7fKgUWfXPIZye6NmgmK2dFEe1A/exec",
+        url: "https://script.google.com/macros/s/AKfycbzlZ08csbJ3bGOTpmc9QTvjfDmVngcrOmY0cJh5gLxTeliwMnA3-KjhZSjyxKqP2mQ9/exec",
         data: request,
         dataType: "jsonp",
         success: function(data: any) {
@@ -73,7 +52,13 @@ export default Vue.extend({
     },
   },
   mounted() {
-    // callAppsScript()
+    if ($(window) != undefined) {
+      if ($(window).width() > $(window).height()) {
+        $("*").removeClass("mobile")
+      } else {
+        $("*").addClass("mobile")
+      }
+    }
   }
 })
 </script>
